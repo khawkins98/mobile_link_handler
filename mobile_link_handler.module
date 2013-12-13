@@ -8,4 +8,23 @@ function mobile_link_handler_page_build(&$page) {
   drupal_add_css(drupal_get_path('module', 'mobile_link_handler')  . '/mobile_link_handler.css');
   drupal_add_js(drupal_get_path('module', 'mobile_link_handler')  . '/mobile_link_handler.js');
 
+  $debug = FALSE;
+
+  if ($debug === TRUE) {
+    global $user;
+
+    // even though we're debugging, only show for user 1 (aka admin)
+    if ( ($user->uid == 78) || ($user->uid == 1) ) {
+      $page['footer']['#sorted'] = FALSE;
+        
+      $page['footer']['mobile_link_handler'] = array(
+        '#markup' => '<div id="mobileLinkDebug">Detecting body classes ...</div>', 
+          '#weight' => 25, 
+        );
+    }   
+
+
+
+  }
+
 }
