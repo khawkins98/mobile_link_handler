@@ -1,0 +1,7 @@
+name = Mobile Link Handler
+description = A simple set of JS detects that ensure mobile browsers don't open links in external tabs and attempts top open Facebook links in FB App
+
+package = User interface
+core = 7.x
+
+version = "7.x-1.x-dev"

@@ -1,0 +1,11 @@
+<?php
+
+/**
+ * Add js and css for the mobile notice.
+ **/
+function mobile_link_handler_page_build(&$page) {
+
+  drupal_add_css(drupal_get_path('module', 'mobile_link_handler')  . '/mobile_link_handler.css');
+  drupal_add_js(drupal_get_path('module', 'mobile_link_handler')  . '/mobile_link_handler.js');
+
+}
